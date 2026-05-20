@@ -1,0 +1,5 @@
+User-agent: *
+
+Allow: /
+
+Sitemap: https://selltechindproductions.vercel.app/sitemap.xml

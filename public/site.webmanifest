@@ -1,0 +1,15 @@
+{
+  "name": "SellTech Ind. Productions",
+  "short_name": "SellTech",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#0f172a",
+  "theme_color": "#0f172a",
+  "icons": [
+    {
+      "src": "/Sell-tech.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    }
+  ]
+}

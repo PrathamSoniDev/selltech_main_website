@@ -34,11 +34,16 @@ export function Navbar() {
           }`}
         >
           <a href="#home" className="flex items-center gap-2 group">
-            <span className="relative inline-flex h-9 w-9 items-center justify-center rounded-xl bg-[image:var(--gradient-primary)] text-primary-foreground shadow-[var(--shadow-glow)] transition-transform group-hover:scale-110">
-              <Sparkles className="h-5 w-5" />
+            <span className="relative inline-flex h-10 w-10 items-center justify-center overflow-hidden rounded-xl shadow-[var(--shadow-glow)] transition-transform duration-300 group-hover:scale-110">
+              <img
+                src="/Sell-tech.png"
+                alt="SellTech Logo"
+                className="h-full w-full object-cover"
+              />
             </span>
+
             <span className="font-semibold tracking-tight text-sm sm:text-base">
-              SellTech <span className="text-muted-foreground">IND.</span>
+              SellTech <span className="text-muted-foreground">IND.</span> Productions
             </span>
           </a>
 
@@ -56,10 +61,13 @@ export function Navbar() {
           </ul>
 
           <div className="hidden md:flex items-center gap-2">
-            <Button variant="ghost" asChild>
+            {/* <Button variant="ghost" asChild>
               <a href="#contact">Sign in</a>
-            </Button>
-            <Button asChild className="bg-[image:var(--gradient-primary)] text-primary-foreground hover:opacity-90 shadow-[var(--shadow-glow)] rounded-xl">
+            </Button> */}
+            <Button
+              asChild
+              className="bg-[image:var(--gradient-primary)] text-primary-foreground hover:opacity-90 shadow-[var(--shadow-glow)] rounded-xl"
+            >
               <a href="#contact">Get Started</a>
             </Button>
           </div>
@@ -88,8 +96,13 @@ export function Navbar() {
                 </li>
               ))}
               <li className="pt-2">
-                <Button asChild className="w-full bg-[image:var(--gradient-primary)] text-primary-foreground rounded-xl">
-                  <a href="#contact" onClick={() => setOpen(false)}>Get Started</a>
+                <Button
+                  asChild
+                  className="w-full bg-[image:var(--gradient-primary)] text-primary-foreground rounded-xl"
+                >
+                  <a href="#contact" onClick={() => setOpen(false)}>
+                    Get Started
+                  </a>
                 </Button>
               </li>
             </ul>

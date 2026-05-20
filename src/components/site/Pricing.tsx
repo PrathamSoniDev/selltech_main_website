@@ -4,29 +4,45 @@ import { Button } from "@/components/ui/button";
 
 const plans = [
   {
-    name: "Launch",
-    price: "$4.9k",
-    cadence: "/ sprint",
-    desc: "Land an MVP or polished marketing site in weeks.",
-    features: ["1 product squad", "Weekly demos", "Design + frontend", "Hosting & analytics setup"],
-    cta: "Start a sprint",
+    name: "Startup MVP",
+    desc: "Launch your product quickly with a lean, scalable MVP designed for rapid market validation.",
+    features: [
+      "UI/UX Design",
+      "Frontend Development",
+      "Backend APIs",
+      "Deployment & Hosting",
+      "Technical Consultation",
+    ],
+    cta: "Contact Us",
   },
+
   {
-    name: "Scale",
-    price: "$12.9k",
-    cadence: "/ month",
-    desc: "Full-stack squad for SaaS, mobile and platforms.",
-    features: ["Senior full-stack squad", "Design system + UX", "CI/CD + observability", "AI copilots included", "Dedicated PM"],
-    cta: "Book a call",
+    name: "Growth SaaS",
+    desc: "Scale your platform with advanced architecture, integrations, automation, and AI-powered workflows.",
+    features: [
+      "Full-Stack Development",
+      "Cloud Infrastructure",
+      "AI Integrations",
+      "Admin Dashboards",
+      "Performance Optimization",
+      "Dedicated Support",
+    ],
+    cta: "Book Discovery Call",
     highlight: true,
   },
+
   {
-    name: "Enterprise",
-    price: "Custom",
-    cadence: "",
-    desc: "Embedded teams for regulated and large-scale builds.",
-    features: ["Multi-squad delivery", "SOC 2-aligned process", "24/7 support SLA", "Architecture & audits"],
-    cta: "Talk to sales",
+    name: "Enterprise Solutions",
+    desc: "Custom enterprise-grade systems engineered for security, scalability, and long-term growth.",
+    features: [
+      "Custom Architecture",
+      "Enterprise Security",
+      "Multi-Team Collaboration",
+      "Automation Systems",
+      "Scalable Infrastructure",
+      "Priority Support",
+    ],
+    cta: "Talk to Sales",
   },
 ];
 
@@ -60,10 +76,11 @@ export function Pricing() {
                   </span>
                 )}
                 <h3 className="font-semibold">{p.name}</h3>
-                <div className="mt-3 flex items-baseline gap-1">
-                  <span className="text-4xl font-bold text-gradient">{p.price}</span>
-                  <span className="text-sm text-muted-foreground">{p.cadence}</span>
-                </div>
+<div className="mt-4">
+  <span className="inline-flex items-center rounded-full border border-primary/20 bg-primary/10 px-4 py-2 text-sm font-medium text-primary">
+    Custom Pricing
+  </span>
+</div>
                 <p className="mt-2 text-sm text-muted-foreground">{p.desc}</p>
                 <ul className="mt-6 space-y-3">
                   {p.features.map((f) => (

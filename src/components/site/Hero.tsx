@@ -8,7 +8,10 @@ export function Hero() {
       <div className="absolute inset-0 -z-10 bg-grid opacity-40 [mask-image:radial-gradient(ellipse_at_center,black_30%,transparent_75%)]" />
       <div className="absolute inset-0 -z-10" style={{ background: "var(--gradient-hero)" }} />
       <div className="absolute -z-10 top-1/3 left-1/4 h-72 w-72 rounded-full bg-primary/20 blur-3xl animate-blob" />
-      <div className="absolute -z-10 top-1/4 right-1/4 h-80 w-80 rounded-full bg-accent/20 blur-3xl animate-blob" style={{ animationDelay: "2s" }} />
+      <div
+        className="absolute -z-10 top-1/4 right-1/4 h-80 w-80 rounded-full bg-accent/20 blur-3xl animate-blob"
+        style={{ animationDelay: "2s" }}
+      />
 
       <div className="container mx-auto px-4">
         <div className="max-w-4xl mx-auto text-center">
@@ -17,15 +20,14 @@ export function Hero() {
               <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-primary opacity-75" />
               <span className="relative inline-flex rounded-full h-2 w-2 bg-primary" />
             </span>
-            New · AI-augmented product engineering
+            You Dream It We Build It
           </div>
 
           <h1
             className="text-4xl sm:text-5xl md:text-7xl font-bold tracking-tight leading-[1.05] animate-fade-in-up"
             style={{ animationDelay: "120ms" }}
           >
-            Custom software that{" "}
-            <span className="text-gradient">scales your business</span>{" "}
+            Custom software that <span className="text-gradient">scales your business</span>{" "}
             <span className="inline-flex items-center gap-3 text-3xl sm:text-4xl md:text-5xl align-middle font-medium text-muted-foreground">
               is <Fingerprint className="h-8 w-8 md:h-10 md:w-10 text-primary" /> human
               <span className="text-primary">+</span>
@@ -37,9 +39,10 @@ export function Hero() {
             className="mt-7 text-base sm:text-lg text-muted-foreground max-w-2xl mx-auto leading-relaxed animate-fade-in-up"
             style={{ animationDelay: "260ms" }}
           >
-            SellTech Ind. Productions delivers modern mobile applications, scalable software systems,
-            high-converting websites, SaaS platforms, and enterprise-grade digital solutions designed to
-            help startups, businesses, and brands grow faster in the digital world.
+            SellTech Ind. Productions delivers modern mobile applications, scalable software
+            systems, high-converting websites, SaaS platforms, and enterprise-grade digital
+            solutions designed to help startups, businesses, and brands grow faster in the digital
+            world.
           </p>
 
           <div
@@ -58,12 +61,12 @@ export function Hero() {
             </Button>
             <Button
               asChild
-              variant="outline"
               size="lg"
-              className="rounded-xl h-12 px-6 glass border-border/60 hover:bg-secondary/60"
+              className="rounded-xl h-12 px-6 glass border border-border/60 bg-transparent text-white hover:bg-primary hover:text-white hover:border-primary hover:shadow-[var(--shadow-glow)] transition-all duration-300"
             >
               <a href="#portfolio">
-                <Play className="mr-2 h-4 w-4" /> View Portfolio
+                <Play className="mr-2 h-4 w-4 text-white" />
+                <span className="text-white">View Portfolio</span>
               </a>
             </Button>
           </div>
@@ -83,16 +86,21 @@ export function Hero() {
                     <span className="h-3 w-3 rounded-full bg-primary/70" />
                   </div>
                   <div className="ml-3 text-xs text-muted-foreground font-mono">
-                    selltech.app / dashboard
+                    CRM APP / dashboard
                   </div>
                 </div>
                 <div className="grid grid-cols-12 gap-3 p-4">
                   <div className="col-span-3 hidden md:flex flex-col gap-2">
-                    {["Overview","Projects","Pipelines","AI Agents","Settings"].map((i, idx) => (
-                      <div key={i} className={`flex items-center gap-2 px-3 py-2 rounded-lg text-xs ${idx===0 ? "bg-primary/10 text-primary" : "text-muted-foreground"}`}>
-                        <Cpu className="h-3 w-3" /> {i}
-                      </div>
-                    ))}
+                    {["Overview", "Projects", "Pipelines", "AI Agents", "Settings"].map(
+                      (i, idx) => (
+                        <div
+                          key={i}
+                          className={`flex items-center gap-2 px-3 py-2 rounded-lg text-xs ${idx === 0 ? "bg-primary/10 text-primary" : "text-muted-foreground"}`}
+                        >
+                          <Cpu className="h-3 w-3" /> {i}
+                        </div>
+                      ),
+                    )}
                   </div>
                   <div className="col-span-12 md:col-span-9 grid grid-cols-3 gap-3">
                     {[
@@ -100,8 +108,13 @@ export function Hero() {
                       { label: "Active users", value: "12,480", trend: "+18%" },
                       { label: "Uptime", value: "99.99%", trend: "30d" },
                     ].map((s) => (
-                      <div key={s.label} className="rounded-xl border border-border/40 bg-secondary/30 p-3 text-left">
-                        <div className="text-[10px] uppercase tracking-wider text-muted-foreground">{s.label}</div>
+                      <div
+                        key={s.label}
+                        className="rounded-xl border border-border/40 bg-secondary/30 p-3 text-left"
+                      >
+                        <div className="text-[10px] uppercase tracking-wider text-muted-foreground">
+                          {s.label}
+                        </div>
                         <div className="mt-1 text-lg font-semibold">{s.value}</div>
                         <div className="text-[10px] text-primary">{s.trend}</div>
                       </div>
@@ -116,7 +129,9 @@ export function Hero() {
                           />
                         ))}
                       </div>
-                      <div className="text-[10px] uppercase tracking-wider text-muted-foreground">Weekly velocity</div>
+                      <div className="text-[10px] uppercase tracking-wider text-muted-foreground">
+                        Weekly velocity
+                      </div>
                     </div>
                   </div>
                 </div>
@@ -125,11 +140,20 @@ export function Hero() {
 
             {/* Floating chips */}
             <div className="hidden md:block absolute -left-6 top-1/3 glass-card rounded-2xl px-4 py-3 animate-float">
-              <div className="text-[10px] uppercase tracking-wider text-muted-foreground">Deploy</div>
-              <div className="text-sm font-semibold flex items-center gap-2"><span className="h-2 w-2 rounded-full bg-primary animate-pulse" /> Production</div>
+              <div className="text-[10px] uppercase tracking-wider text-muted-foreground">
+                Deploy
+              </div>
+              <div className="text-sm font-semibold flex items-center gap-2">
+                <span className="h-2 w-2 rounded-full bg-primary animate-pulse" /> Production
+              </div>
             </div>
-            <div className="hidden md:block absolute -right-6 top-1/2 glass-card rounded-2xl px-4 py-3 animate-float" style={{ animationDelay: "1.5s" }}>
-              <div className="text-[10px] uppercase tracking-wider text-muted-foreground">AI Copilot</div>
+            <div
+              className="hidden md:block absolute -right-6 top-1/2 glass-card rounded-2xl px-4 py-3 animate-float"
+              style={{ animationDelay: "1.5s" }}
+            >
+              <div className="text-[10px] uppercase tracking-wider text-muted-foreground">
+                AI Copilot
+              </div>
               <div className="text-sm font-semibold">Shipped 24 PRs</div>
             </div>
           </div>

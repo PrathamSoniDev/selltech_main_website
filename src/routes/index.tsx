@@ -18,9 +18,20 @@ export const Route = createFileRoute("/")({
   head: () => ({
     meta: [
       { title: "SellTech Ind. Productions — Custom software that scales your business" },
-      { name: "description", content: "Modern mobile apps, SaaS platforms, websites and enterprise-grade digital solutions — engineered by humans + AI to help startups and brands grow faster." },
-      { property: "og:title", content: "SellTech Ind. Productions — Building scalable digital experiences" },
-      { property: "og:description", content: "Mobile apps, SaaS, websites and enterprise software built by an AI-augmented product studio." },
+      {
+        name: "description",
+        content:
+          "Modern mobile apps, SaaS platforms, websites and enterprise-grade digital solutions — engineered by humans + AI to help startups and brands grow faster.",
+      },
+      {
+        property: "og:title",
+        content: "SellTech Ind. Productions — Building scalable digital experiences",
+      },
+      {
+        property: "og:description",
+        content:
+          "Mobile apps, SaaS, websites and enterprise software built by an AI-augmented product studio.",
+      },
       { property: "og:type", content: "website" },
       { name: "twitter:card", content: "summary_large_image" },
     ],
