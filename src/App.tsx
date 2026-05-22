@@ -1,7 +1,7 @@
 import { Navbar } from "@/components/site/Navbar";
 import { Analytics } from "@vercel/analytics/react";
 import { Hero } from "@/components/site/Hero";
-
+import { SpeedInsights } from "@vercel/speed-insights/react";
 import { LogoMarquee } from "@/components/site/LogoMarquee";
 
 import { About } from "@/components/site/About";
@@ -31,6 +31,7 @@ export default function App() {
     <div className="min-h-screen bg-background text-foreground overflow-x-hidden">
       <Navbar />
       <Analytics />
+      <SpeedInsights />
       <main>
         <Hero />
         <LogoMarquee />
