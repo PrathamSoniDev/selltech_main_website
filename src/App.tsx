@@ -1,5 +1,5 @@
 import { Navbar } from "@/components/site/Navbar";
-import { Analytics } from "@vercel/analytics/next";
+import { Analytics } from "@vercel/analytics/react";
 import { Hero } from "@/components/site/Hero";
 
 import { LogoMarquee } from "@/components/site/LogoMarquee";
@@ -30,7 +30,7 @@ export default function App() {
   return (
     <div className="min-h-screen bg-background text-foreground overflow-x-hidden">
       <Navbar />
-
+      <Analytics />
       <main>
         <Hero />
         <LogoMarquee />
