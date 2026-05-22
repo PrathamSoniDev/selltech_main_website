@@ -1,58 +1,30 @@
-import {
-  Navbar
-} from "@/components/site/Navbar";
+import { Navbar } from "@/components/site/Navbar";
+import { Analytics } from "@vercel/analytics/next";
+import { Hero } from "@/components/site/Hero";
 
-import {
-  Hero
-} from "@/components/site/Hero";
+import { LogoMarquee } from "@/components/site/LogoMarquee";
 
-import {
-  LogoMarquee
-} from "@/components/site/LogoMarquee";
+import { About } from "@/components/site/About";
 
-import {
-  About
-} from "@/components/site/About";
+import { Services } from "@/components/site/Services";
 
-import {
-  Services
-} from "@/components/site/Services";
+import { Stats } from "@/components/site/Stats";
 
-import {
-  Stats
-} from "@/components/site/Stats";
+import { WhyUs } from "@/components/site/WhyUs";
 
-import {
-  WhyUs
-} from "@/components/site/WhyUs";
+import { Process } from "@/components/site/Process";
 
-import {
-  Process
-} from "@/components/site/Process";
+import { Portfolio } from "@/components/site/Portfolio";
 
-import {
-  Portfolio
-} from "@/components/site/Portfolio";
+import { Testimonials } from "@/components/site/Testimonials";
 
-import {
-  Testimonials
-} from "@/components/site/Testimonials";
+import { Pricing } from "@/components/site/Pricing";
 
-import {
-  Pricing
-} from "@/components/site/Pricing";
+import { FAQ } from "@/components/site/FAQ";
 
-import {
-  FAQ
-} from "@/components/site/FAQ";
+import { Contact } from "@/components/site/Contact";
 
-import {
-  Contact
-} from "@/components/site/Contact";
-
-import {
-  Footer
-} from "@/components/site/Footer";
+import { Footer } from "@/components/site/Footer";
 
 export default function App() {
   return (
