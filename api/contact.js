@@ -1,4 +1,6 @@
-import nodemailer from "nodemailer";
+import { Resend } from "resend";
+
+const resend = new Resend(process.env.RESEND_API_KEY);
 
 export default async function handler(req, res) {
   if (req.method !== "POST") {
@@ -18,18 +20,13 @@ export default async function handler(req, res) {
       });
     }
 
-    const transporter = nodemailer.createTransport({
-      service: "gmail",
-      auth: {
-        user: process.env.EMAIL_USER,
-        pass: process.env.EMAIL_PASS,
-      },
-    });
+    await resend.emails.send({
+      from: "Sell Tech <info@selltechindproductions.in>",
 
-    await transporter.sendMail({
-      from: process.env.EMAIL_USER,
       to: "info@selltechindproductions.in",
+
       subject: `New Website Inquiry from ${name}`,
+
       html: `
         <div style="font-family: Arial; padding: 20px;">
           <h2>New Contact Inquiry</h2>
@@ -55,7 +52,7 @@ export default async function handler(req, res) {
 
     return res.status(500).json({
       success: false,
-      message: "Failed to send email",
+      message: error.message,
     });
   }
 }
