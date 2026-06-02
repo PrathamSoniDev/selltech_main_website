@@ -26,6 +26,8 @@ import { Contact } from "@/components/site/Contact";
 
 import { Footer } from "@/components/site/Footer";
 
+import { FounderSection } from "@/components/site/Founder";
+
 export default function App() {
   return (
     <div className="min-h-screen bg-background text-foreground overflow-x-hidden">
@@ -36,6 +38,7 @@ export default function App() {
         <Hero />
         <LogoMarquee />
         <About />
+        <FounderSection />
         <Services />
         <Stats />
         <WhyUs />
