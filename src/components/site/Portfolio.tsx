@@ -3,48 +3,81 @@ import { ArrowUpRight } from "lucide-react";
 
 const projects = [
   {
-    title: "Modern E-Commerce Ecosystem",
-    category: "E-Commerce Platforms",
+    title: "Website Development",
+    category: "Web Solutions",
     description:
-      "Scalable e-commerce websites and mobile applications with real-time inventory, payment gateways, analytics, and AI-powered customer experiences.",
+      "Custom corporate websites, business portals, landing pages, e-commerce platforms, and enterprise web applications built for performance, scalability, and conversion.",
     image:
-      "https://images.unsplash.com/photo-1556740749-887f6717d7e4?q=80&w=1600&auto=format&fit=crop",
+      "https://images.unsplash.com/photo-1460925895917-afdab827c52f?q=80&w=1600&auto=format&fit=crop",
   },
 
   {
-    title: "HealthTech Patient Platform",
-    category: "Healthcare Applications",
+    title: "Mobile App Development",
+    category: "iOS • Android • Flutter • React Native",
     description:
-      "Digital healthcare systems with appointment booking, patient dashboards, telemedicine integration, and secure health record management.",
+      "High-performance cross-platform and native mobile applications with modern UI, secure architecture, real-time features, and seamless user experiences.",
     image:
-      "https://images.unsplash.com/photo-1576091160550-2173dba999ef?q=80&w=1600&auto=format&fit=crop",
+      "https://images.unsplash.com/photo-1512941937669-90a1b58e7e9c?q=80&w=1600&auto=format&fit=crop",
   },
 
   {
-    title: "Smart Booking & Service Apps",
-    category: "Booking Solutions",
+    title: "SaaS Development",
+    category: "Cloud Platforms",
     description:
-      "End-to-end booking platforms for salons, services, consultations, hotels, and local businesses with automation and live scheduling.",
+      "Scalable SaaS platforms with subscription management, multi-tenant architecture, dashboards, analytics, automation, and enterprise-grade infrastructure.",
     image:
-      "https://images.unsplash.com/photo-1521791136064-7986c2920216?q=80&w=1600&auto=format&fit=crop",
+      "https://images.unsplash.com/photo-1451187580459-43490279c0fa?q=80&w=1600&auto=format&fit=crop",
   },
 
   {
-    title: "Jumper Learning Platform",
-    category: "EdTech Solutions",
+    title: "Blockchain Development",
+    category: "Web3 Solutions",
     description:
-      "Interactive educational platforms for institutes and coaching systems with live classes, student dashboards, assessments, and AI-assisted learning.",
+      "Smart contracts, decentralized applications (DApps), token ecosystems, NFT platforms, and blockchain-powered business solutions with secure implementation.",
     image:
-      "https://images.unsplash.com/photo-1522202176988-66273c2fd55f?q=80&w=1600&auto=format&fit=crop",
+      "https://images.unsplash.com/photo-1639762681057-408e52192e55?q=80&w=1600&auto=format&fit=crop",
+  },
+
+  {
+    title: "Game Development",
+    category: "2D • 3D • Multiplayer",
+    description:
+      "Immersive mobile, web, and desktop games with engaging gameplay, multiplayer systems, monetization features, and high-quality graphics.",
+    image:
+      "https://images.unsplash.com/photo-1511512578047-dfb367046420?q=80&w=1600&auto=format&fit=crop",
+  },
+
+  {
+    title: "UI/UX Design",
+    category: "Product Design",
+    description:
+      "User-centered design systems, wireframes, prototypes, dashboards, mobile interfaces, and modern digital experiences focused on usability and engagement.",
+    image:
+      "https://images.unsplash.com/photo-1545239351-1141bd82e8a6?q=80&w=1600&auto=format&fit=crop",
+  },
+
+  {
+    title: "Digital Marketing",
+    category: "Growth & Branding",
+    description:
+      "SEO, social media marketing, paid advertising, lead generation, content strategy, and performance-driven campaigns to accelerate business growth.",
+    image:
+      "https://images.unsplash.com/photo-1432888622747-4eb9a8efeb07?q=80&w=1600&auto=format&fit=crop",
+  },
+
+  {
+    title: "Custom Software Development",
+    category: "Enterprise Solutions",
+    description:
+      "Tailor-made software systems, CRMs, ERPs, business automation platforms, and enterprise applications designed around your operational requirements.",
+    image:
+      "https://images.unsplash.com/photo-1551434678-e076c223a692?q=80&w=1600&auto=format&fit=crop",
   },
 ];
 
 export function Portfolio() {
   return (
-    <section
-      id="portfolio"
-      className="relative py-24 md:py-32 overflow-hidden"
-    >
+    <section id="portfolio" className="relative py-24 md:py-32 overflow-hidden">
       <div className="absolute inset-0 bg-grid opacity-20" />
 
       <div className="container relative mx-auto px-4">
@@ -56,16 +89,12 @@ export function Portfolio() {
               </span>
 
               <h2 className="text-3xl md:text-5xl font-bold tracking-tight leading-tight">
-                Real digital solutions for{" "}
-                <span className="text-gradient">
-                  modern industries
-                </span>
+                Real digital solutions for <span className="text-gradient">modern industries</span>
               </h2>
 
               <p className="mt-5 text-muted-foreground text-lg">
-                From scalable SaaS ecosystems to enterprise-grade applications,
-                we engineer high-performance digital products tailored for
-                modern businesses and institutions.
+                From scalable SaaS ecosystems to enterprise-grade applications, we engineer
+                high-performance digital products tailored for modern businesses and institutions.
               </p>
             </div>
 
@@ -83,7 +112,6 @@ export function Portfolio() {
           {projects.map((project, index) => (
             <Reveal key={project.title} delay={index * 100}>
               <article className="group relative overflow-hidden rounded-3xl glass-card glow-border min-h-[420px] transition-all duration-500 hover:-translate-y-2 hover:shadow-[var(--shadow-elegant)]">
-                
                 <div className="absolute inset-0 overflow-hidden">
                   <img
                     src={project.image}
