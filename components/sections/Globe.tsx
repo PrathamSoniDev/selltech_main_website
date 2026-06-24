@@ -32,18 +32,38 @@ export function Globe() {
         const lat = (y / 60) * 180 - 90;
         const lon = (x / 120) * 360 - 180;
         const land =
-          (lon > -20 && lon < 55 && lat > -35 && lat < 60 && Math.random() < 0.55) ||
-          (lon > 55 && lon < 150 && lat > 0 && lat < 70 && Math.random() < 0.55) ||
-          (lon > 110 && lon < 155 && lat > -40 && lat < -10 && Math.random() < 0.6) ||
-          (lon > -130 && lon < -60 && lat > 10 && lat < 70 && Math.random() < 0.55) ||
-          (lon > -80 && lon < -35 && lat > -55 && lat < 12 && Math.random() < 0.55);
+          (lon > -20 &&
+            lon < 55 &&
+            lat > -35 &&
+            lat < 60 &&
+            Math.random() < 0.55) ||
+          (lon > 55 &&
+            lon < 150 &&
+            lat > 0 &&
+            lat < 70 &&
+            Math.random() < 0.55) ||
+          (lon > 110 &&
+            lon < 155 &&
+            lat > -40 &&
+            lat < -10 &&
+            Math.random() < 0.6) ||
+          (lon > -130 &&
+            lon < -60 &&
+            lat > 10 &&
+            lat < 70 &&
+            Math.random() < 0.55) ||
+          (lon > -80 &&
+            lon < -35 &&
+            lat > -55 &&
+            lat < 12 &&
+            Math.random() < 0.55);
         if (land) dots.push([x / 120, y / 60]);
       }
     }
 
-    const hq = hubs.find((h) => h.hq) ?? hubs[0];
+    const hq = hubs.find((h) => (h as any).hq) ?? hubs[0];
     const arcs = hubs
-      .filter((h) => !h.hq)
+      .filter((h) => !(h as any).hq)
       .map((h, idx) => ({
         x1: hq.x,
         y1: hq.y,
@@ -66,8 +86,10 @@ export function Globe() {
       });
 
       arcs.forEach((a) => {
-        const x1 = a.x1 * w, y1 = a.y1 * h;
-        const x2 = a.x2 * w, y2 = a.y2 * h;
+        const x1 = a.x1 * w,
+          y1 = a.y1 * h;
+        const x2 = a.x2 * w,
+          y2 = a.y2 * h;
         const mx = (x1 + x2) / 2;
         const my = (y1 + y2) / 2 - Math.abs(x2 - x1) * 0.35;
 
@@ -109,16 +131,20 @@ export function Globe() {
     <section id="globe" className="overflow-hidden px-6 py-40">
       <div className="container-x grid grid-cols-1 items-center gap-16 lg:grid-cols-[0.9fr_1.1fr]">
         <div>
-          <Reveal><Eyebrow>Global delivery · 9 markets</Eyebrow></Reveal>
+          <Reveal>
+            <Eyebrow>Global delivery · 9 markets</Eyebrow>
+          </Reveal>
           <Reveal delay={0.05}>
             <h2 className="section-title">
-              Engineering rooted in India.<br />
+              Engineering rooted in India.
+              <br />
               <em>Shipped across nine time zones.</em>
             </h2>
           </Reveal>
           <Reveal delay={0.1}>
             <p className="section-sub">
-              Headquartered in India with delivery cells overlapping every major Western and APAC time zone. Always-on, never outsourced.
+              Headquartered in India with delivery cells overlapping every major
+              Western and APAC time zone. Always-on, never outsourced.
             </p>
           </Reveal>
 
