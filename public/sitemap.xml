@@ -1,43 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-
 <urlset
   xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
 >
-
   <url>
-    <loc>https://selltechindproductions.in/</loc>
+    <loc>https://www.selltechindproductions.in/</loc>
+    <lastmod>2026-06-24</lastmod>
+    <changefreq>daily</changefreq>
     <priority>1.0</priority>
-    <changefreq>weekly</changefreq>
   </url>
-
-  <url>
-    <loc>https://selltechindproductions.in/#about</loc>
-    <priority>0.9</priority>
-    <changefreq>monthly</changefreq>
-  </url>
-
-  <url>
-    <loc>https://selltechindproductions.in/#services</loc>
-    <priority>0.9</priority>
-    <changefreq>monthly</changefreq>
-  </url>
-
-  <url>
-    <loc>https://selltechindproductions.in/#portfolio</loc>
-    <priority>0.8</priority>
-    <changefreq>monthly</changefreq>
-  </url>
-
-  <url>
-    <loc>https://selltechindproductions.in/#pricing</loc>
-    <priority>0.8</priority>
-    <changefreq>monthly</changefreq>
-  </url>
-
-  <url>
-    <loc>https://selltechindproductions.in/#contact</loc>
-    <priority>0.9</priority>
-    <changefreq>monthly</changefreq>
-  </url>
-
 </urlset>

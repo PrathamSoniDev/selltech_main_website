@@ -1,0 +1,230 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* ════════════════════════════════════════════════════════════
+   SellTech — global tokens & atmospheric primitives
+   ════════════════════════════════════════════════════════════ */
+
+@layer base {
+  :root {
+    --grad-aurora: linear-gradient(
+      120deg,
+      #00d4ff 0%,
+      #22d3ee 35%,
+      #8b5cf6 75%,
+      #e879f9 100%
+    );
+    --ease: cubic-bezier(0.22, 0.61, 0.36, 1);
+    --radius: 18px;
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    background:
+      radial-gradient(
+        1200px 600px at 20% -10%,
+        rgba(0, 212, 255, 0.12),
+        transparent 60%
+      ),
+      radial-gradient(
+        900px 600px at 90% 10%,
+        rgba(139, 92, 246, 0.1),
+        transparent 60%
+      ),
+      #050816;
+    cursor: none;
+  }
+
+  @media (max-width: 900px) {
+    body {
+      cursor: auto;
+    }
+  }
+
+  ::selection {
+    background: #22d3ee;
+    color: #001018;
+  }
+
+  button,
+  a,
+  input,
+  textarea,
+  select {
+    cursor: none;
+  }
+  @media (max-width: 900px) {
+    button,
+    a,
+    input,
+    textarea,
+    select {
+      cursor: auto;
+    }
+  }
+}
+
+@layer components {
+  /* — section frame — */
+  .container-x {
+    @apply max-w-[1240px] mx-auto px-6;
+  }
+
+  .eyebrow {
+    @apply inline-flex items-center gap-2.5 font-mono text-[11.5px] tracking-[0.18em] uppercase text-ink-2;
+  }
+
+  .eyebrow-dot {
+    @apply w-1.5 h-1.5 rounded-full bg-brand-cyan;
+    box-shadow: 0 0 12px #22d3ee;
+    animation: pulse 2.4s ease-in-out infinite;
+  }
+
+  .section-title {
+    @apply font-display font-normal text-[clamp(36px,5.4vw,72px)] leading-[1.02] tracking-[-0.015em] text-ink-0 my-4;
+  }
+
+  .section-title em {
+    @apply not-italic bg-clip-text text-transparent;
+    background-image: var(--grad-aurora);
+    font-style: italic;
+  }
+
+  .section-sub {
+    @apply max-w-[640px] text-ink-2 text-base leading-[1.6];
+  }
+
+  /* — buttons — */
+  .btn-primary {
+    @apply inline-flex items-center gap-2.5 rounded-full px-[22px] py-3.5 text-sm font-medium tracking-[0.01em] transition-all duration-300 text-[#04060f];
+    background: linear-gradient(180deg, #fff, #dfe9ff);
+    box-shadow:
+      0 14px 50px rgba(0, 212, 255, 0.25),
+      inset 0 -2px 0 rgba(0, 0, 0, 0.18);
+  }
+  .btn-primary:hover {
+    @apply -translate-y-0.5;
+    box-shadow: 0 22px 60px rgba(0, 212, 255, 0.42);
+  }
+
+  .btn-ghost {
+    @apply inline-flex items-center gap-2.5 rounded-full px-[22px] py-3.5 text-sm font-medium text-ink-0 transition-all duration-300 border border-line-strong;
+    background: rgba(10, 14, 32, 0.4);
+    backdrop-filter: blur(10px);
+  }
+  .btn-ghost:hover {
+    background: rgba(20, 28, 56, 0.7);
+    border-color: #22d3ee;
+  }
+
+  /* — generic chip / pill — */
+  .chip-glass {
+    @apply inline-flex items-center gap-2 rounded-full border border-line-strong px-3 py-1 text-[11px] font-mono text-ink-1;
+    background: rgba(7, 11, 28, 0.55);
+    backdrop-filter: blur(10px);
+  }
+}
+
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+
+  .grad-aurora-text {
+    @apply bg-clip-text text-transparent;
+    background-image: var(--grad-aurora);
+  }
+
+  .mask-fade-x {
+    mask-image: linear-gradient(
+      90deg,
+      transparent,
+      #000 12%,
+      #000 88%,
+      transparent
+    );
+  }
+
+  .mask-fade-radial {
+    mask-image: radial-gradient(80% 60% at 50% 30%, #000 50%, transparent 100%);
+  }
+}
+
+@keyframes pulse {
+  0%,
+  100% {
+    opacity: 0.5;
+    transform: scale(0.9);
+  }
+  50% {
+    opacity: 1;
+    transform: scale(1.2);
+  }
+}
+
+@keyframes scrollLine {
+  0% {
+    transform: scaleY(0);
+    transform-origin: top;
+  }
+  50% {
+    transform: scaleY(1);
+    transform-origin: top;
+  }
+  51% {
+    transform-origin: bottom;
+  }
+  100% {
+    transform: scaleY(0);
+    transform-origin: bottom;
+  }
+}
+
+/* reduced motion */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.001ms !important;
+    transition-duration: 0.001ms !important;
+  }
+}
+
+/* form auto-fill colour fix */
+input:-webkit-autofill,
+input:-webkit-autofill:focus {
+  -webkit-text-fill-color: #f5f7ff;
+  -webkit-box-shadow: 0 0 0 1000px rgba(5, 8, 22, 0.6) inset;
+  caret-color: #f5f7ff;
+}
+@keyframes orbit {
+  from {
+    transform: translate(-50%, -50%) rotate(0deg);
+  }
+
+  to {
+    transform: translate(-50%, -50%) rotate(360deg);
+  }
+}
+
+@keyframes orbitReverse {
+  from {
+    transform: translate(-50%, -50%) rotate(360deg);
+  }
+
+  to {
+    transform: translate(-50%, -50%) rotate(0deg);
+  }
+}
+
+.animate-orbit {
+  animation: orbit 32s linear infinite;
+}
+
+.animate-orbit-reverse {
+  animation: orbitReverse 42s linear infinite;
+}
