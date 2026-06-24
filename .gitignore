@@ -105,3 +105,4 @@ cypress/screenshots/
 secrets.json
 credentials.json
 service-account.json
+.env*

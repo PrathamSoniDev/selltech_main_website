@@ -1,9 +1,14 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
+  distDir: "dist",
   reactStrictMode: true,
   poweredByHeader: false,
   experimental: {
-    optimizePackageImports: ["lucide-react", "framer-motion", "@react-three/drei"],
+    optimizePackageImports: [
+      "lucide-react",
+      "framer-motion",
+      "@react-three/drei",
+    ],
   },
   transpilePackages: ["three"],
   images: {
